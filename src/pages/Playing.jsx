@@ -139,7 +139,7 @@ const Playing = ({type, category, difficulty, onClick2}) => {
         <>
           {/* <h1>trigger: {trigger}</h1> */}
           <h1 className='font-weird text-yellow-500 text-6xl'>QuizAll</h1>
-          {resCode==0 && <p className='text-xl'>Current score: <p className={`text-2xl text-white${showEffect && "animate__animated animate__heartBeat text-green-400"}`}>{points}</p></p>}
+          {resCode==0 && <p className='text-xl text-yellow-300 font-bold'>Current score: <p className={`text-2xl text-white${showEffect && "animate__animated animate__heartBeat text-green-400"}`}>{points}</p></p>}
           {
             loading ? <Loader/> : <Question clickedAnswer={clickedAnswer} trigger={trigger} handleAnswerClick={handleAnswerClick} options={options} points={points} setPoints={setPoints} correct={questions[currIndex]?.correct_answer} question={questions[currIndex]?.question} code={resCode}></Question>
           }
